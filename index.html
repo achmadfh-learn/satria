@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Untukmu, Sayang</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #00c6ff;
+      text-shadow: 0 0 10px rgba(0, 198, 255, 0.5);
+    }
+
+    p {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #d0d0d0;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 40px;
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 3 / 4; /* ✅ Menentukan rasio proporsional (bisa ubah ke 4/5 atau 1/1 sesuai selera) */
+}
+
+.photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+  z-index: 5;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ Agar gambar memenuhi area tanpa distorsi */
+  display: block;
+  border-radius: 15px;
+}
+
+    .s1 { width: 180px; }
+    .s2 { width: 220px; }
+    .s3 { width: 150px; }
+    .s4 { width: 250px; }
+
+    .controls {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, #0072ff, #00c6ff);
+    }
+
+    /* Paragraf Romantis */
+    .romantic-text {
+      max-width: 800px;
+      margin: 50px auto 20px;
+      text-align: center;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      color: #cfe8ff;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 198, 255, 0.1);
+    }
+
+    .romantic-text span {
+      color: #00c6ff;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      padding-bottom: 40px;
+      font-size: 0.95rem;
+      color: #aaa;
+      opacity: 0.85;
+    }
+
+    .floating-elements {
+      position: fixed;
+      right: 5%;
+      top: 25%;
+      width: 150px;
+      height: 300px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .floating-elements span {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 20px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-elements span:nth-child(1) {
+      top: 0;
+      left: 20px;
+      animation-delay: 0s;
+    }
+
+    .floating-elements span:nth-child(2) {
+      top: 60px;
+      left: 80px;
+      animation-delay: 1.5s;
+    }
+
+    .floating-elements span:nth-child(3) {
+      top: 150px;
+      left: 30px;
+      animation-delay: 3s;
+    }
+
+    .floating-elements span:nth-child(4) {
+      top: 220px;
+      left: 90px;
+      animation-delay: 4.5s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateY(-30px) rotate(20deg);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery { padding: 20px; gap: 8px; }
+      .photo { width: 45%; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Untukmu Sayangkuu, Satria Arya Wirapraja💚</h1>
+  <p>Sebuah halaman kecil — penuh cinta dan kenangan kita💙</p>
+
+  <div class="gallery">
+    <div class="photo s1"><img src="images/1.jpg" alt=""></div>
+    <div class="photo s2"><img src="images/2.jpg" alt=""></div>
+    <div class="photo s3"><img src="images/3.jpg" alt=""></div>
+    <div class="photo s4"><img src="images/4.jpg" alt=""></div>
+    <div class="photo s1"><img src="images/5.jpg" alt=""></div>
+    <div class="photo s3"><img src="images/6.jpg" alt=""></div>
+    <div class="photo s4"><img src="images/7.jpg" alt=""></div>
+    <div class="photo s2"><img src="images/8.jpg" alt=""></div>
+    <div class="photo s3"><img src="images/9.jpg" alt=""></div>
+    <div class="photo s4"><img src="images/10.jpg" alt=""></div>
+    <div class="photo s1"><img src="images/11.jpg" alt=""></div>
+    <div class="photo s2"><img src="images/12.jpg" alt=""></div>
+    <div class="photo s3"><img src="images/13.jpg" alt=""></div>
+    <div class="photo s1"><img src="images/14.jpg" alt=""></div>
+    <div class="photo s4"><img src="images/15.jpg" alt=""></div>
+  </div>
+
+  <div class="romantic-text">
+   <p>
+  Kadang aku nggak tahu harus mulai dari mana untuk ngungkapin semuanya.  
+  Tapi setiap kali aku lihat wajahmu — bahkan dari foto sederhana kayak gini —  
+  <span>rasanya dunia berhenti sebentar</span>, cuma biar aku bisa menikmati momen kecil yang penuh makna ini.  
+  Kamu nggak cuma seseorang yang aku sayangi; kamu adalah alasan kenapa aku belajar tentang arti mencintai tanpa batas.  
+  <br><br>
+  Aku sayang kamu — bukan cuma karena kamu baik, lucu, atau tampan,  
+  tapi karena <span>kamu membuat segalanya terasa lebih hidup</span>.  
+  Denganmu, hal-hal kecil jadi berarti.  
+  Diam pun jadi nyaman, dan jarak bukan lagi sesuatu yang menakutkan.  
+  <br><br>
+  Aku harap kamu tahu, di setiap hariku, ada ruang kecil di hati ini yang selalu kamu isi.  
+  Aku nggak minta banyak — cuma ingin kamu tetap di sini,  
+  dengan segala ketulusan dan hangat yang selalu kamu bawa.  
+  <span>Karena bagiku, cinta itu bukan soal seberapa sering kita ketemu, tapi seberapa kuat kita saling menjaga.</span>  
+  <br><br>
+  Kalau nanti dunia sibuk, dan waktu mulai menjauhkan kita,  
+  aku cuma pengin kamu ingat satu hal:  
+  <span>aku nggak pernah berhenti sayang sama kamu</span>.  
+  Aku selalu berharap kamu juga ngerasain hal yang sama,  
+  walaupun mungkin kamu nggak bilang secara langsung.  
+  <br><br>
+  Kamu itu rumah — tempat di mana aku ngerasa diterima apa adanya.  
+  Dan setiap kali aku ngelihat senyummu, aku sadar…  
+  <span>aku nggak butuh apapun lagi, selain kamu yang tetap di sini, di hatiku.</span> 💚  
+</p>
+
+  </div>
+
+  <div class="controls">
+    <button onclick="playMusic()">Putar Musik</button>
+    <button onclick="pauseMusic()">Jeda</button>
+    <button onclick="sendLove()">Kirim Hati 💖</button>
+  </div>
+
+  <div class="floating-elements">
+    <span>💫</span>
+    <span>💖</span>
+    <span>🌙</span>
+    <span>✨</span>
+  </div>
+
+  <footer>
+    Halaman ini dibuat dengan gaya, cinta, dan sedikit rasa bangga — spesial hanya untukmu 😍💫
+  </footer>
+
+  <audio id="bgm" loop>
+    <source src="terbang.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const music = document.getElementById("bgm");
+
+    function playMusic() { music.play(); }
+    function pauseMusic() { music.pause(); }
+
+    function sendLove() {
+      const heart = document.createElement("span");
+      heart.textContent = "💖";
+      heart.style.position = "fixed";
+      heart.style.left = Math.random() * window.innerWidth + "px";
+      heart.style.top = "100%";
+      heart.style.fontSize = Math.random() * 30 + 15 + "px";
+      heart.style.animation = "floatUp 3s ease-in infinite";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 3000);
+    }
+
+    document.querySelectorAll(".photo").forEach(p => {
+      p.addEventListener("click", () => {
+        const img = p.querySelector("img").src;
+        const viewer = document.createElement("div");
+        viewer.style.position = "fixed";
+        viewer.style.top = 0;
+        viewer.style.left = 0;
+        viewer.style.width = "100%";
+        viewer.style.height = "100%";
+        viewer.style.background = "rgba(0,0,0,0.8)";
+        viewer.style.display = "flex";
+        viewer.style.alignItems = "center";
+        viewer.style.justifyContent = "center";
+        viewer.style.zIndex = "9999";
+        viewer.innerHTML = `<img src="${img}" style="max-width:90%; max-height:90%; border-radius:15px; box-shadow:0 0 20px rgba(255,255,255,0.3)">`;
+        viewer.onclick = () => viewer.remove();
+        document.body.appendChild(viewer);
+      });
+    });
+
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes floatUp {
+        0% { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(-200px); opacity: 0; }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
