@@ -251,15 +251,46 @@
     Halaman ini dibuat dengan gaya, cinta, dan sedikit rasa bangga — spesial hanya untukmu 😍💫
   </footer>
 
-  <audio id="bgm" loop>
-    <source src="terbang.mp3" type="audio/mpeg">
-  </audio>
+  
 
   <script>
-    const music = document.getElementById("bgm");
+    const audio = new Audio('terbang.mp3'); // pastikan file musik ada di folder yang sama
+  audio.loop = true;
+  audio.volume = 0.6;
+  audio.preload = 'auto'; // 🔹 Tambahan penting agar audio dimuat dulu sebelum dimainkan
 
-    function playMusic() { music.play(); }
-    function pauseMusic() { music.pause(); }
+  const btnPlay = document.getElementById('playMusic');
+  const btnPause = document.getElementById('pauseMusic');
+
+  // 🔹 Browser hanya izinkan play setelah interaksi user
+  document.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play().catch(() => {
+        console.log("Autoplay dicegah oleh browser, klik tombol untuk memutar musik.");
+      });
+    }
+  }, { once: true });
+
+  // 🔹 Tombol kontrol musik
+  btnPlay.addEventListener('click', () => {
+    audio.play();
+  });
+
+  btnPause.addEventListener('click', () => {
+    audio.pause();
+  });
+
+  // 🔹 Coba autoplay setelah halaman dimuat (akan gagal di beberapa browser, tapi fallback ke klik di atas)
+  window.addEventListener('load', () => {
+    audio.play().catch(() => {
+      console.log("Autoplay membutuhkan interaksi pengguna.");
+    });
+  });
+
+  // 🔹 Event tambahan: pastikan file audio sudah siap sebelum dimainkan
+  audio.addEventListener('canplaythrough', () => {
+    console.log('✅ Audio sudah siap diputar tanpa gangguan.');
+  });
 
     function sendLove() {
       const heart = document.createElement("span");
